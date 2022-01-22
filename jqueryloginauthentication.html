@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Jq login</title>
+
+<style>
+    .c1{
+        margin: auto;
+        background-color: rgb(83, 76, 102);
+        text-align: center;
+    }  
+    
+</style>
+
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    
+    <table class="c1">
+<form id="form_id" method="post" name="myform">
+    <tr> <td colspan="2"><h2>Javascript Login   Authication</h2></td></tr>
+        <tr>
+<td>User Name : </td> <td><input type="text" name="username" id="username" required/></td>
+</tr> 
+<tr> 
+    <td> password : </td> <td><input type="password" name="password" id="password" required/></td>
+</tr> 
+<tr >
+    <td colspan="2">
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</td>
+</tr>
+</table>
+</form>
+
+
+<script>
+    $(document).ready(function() { 
+     $("#submit").click(function(){
+    var username = $("#username").val();
+    var password = $("#password").val();
+     
+
+  if ( username == ""|| password == "")
+{
+    alert (" plz enter your password or username");
+}
+if ( username == "manan" && password == "1234")
+{
+alert ("Login successfully");
+location.href = "https://web.whatsapp.com/";
+return false;
+}
+else
+{
+ 
+    alert (" username and password is incoorect");
+}
+});
+    });
+
+
+
+
+</script>
+</body>
+</html>
